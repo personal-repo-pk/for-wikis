@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title | default: site.title }}</title>
+  <link rel="stylesheet" href="{{ "/assets/css/styles.css" | relative_url }}">
+</head>
+<body>
+
+  <header>
+    <h1><a href="{{ site.baseurl }}/">{{ site.title }}</a></h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="{{ site.baseurl }}/docs/index.md">Home</a></li>
+      <li><a href="{{ site.baseurl }}/docs/getting-started/index.md">Getting Started</a></li>
+      <li><a href="{{ site.baseurl }}/docs/api-reference/index.md">API Reference</a></li>
+      <li><a href="{{ site.baseurl }}/docs/tutorials/index.md">Tutorials</a></li>
+    </ul>
+  </nav>
+
+  <div class="content">
+    {{ content }}
+  </div>
+
+</body>
+</html>
